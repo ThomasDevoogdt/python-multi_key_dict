@@ -1,10 +1,12 @@
 #!python
 
+import os
+
 from distutils.core import setup
 
 long_descr=''
 
-with open('README.txt') as readme:
+with open('{}/README.txt'.format(os.path.dirname(os.path.realpath(__file__)))) as readme:
     long_descr = readme.read()
 
 setup(name='multi_key_dict',
